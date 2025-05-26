@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victorian Temporal H4ngm4n - Architrave Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --victorian-gold: #d4af37;
+            --ethereal-blue: #4444ff;
+            --cemetery-mist: #e6e6fa;
+            --temporal-purple: #bd93f9;
+            --angel-white: #ffffff;
+            --architrave-shadow: rgba(68, 68, 255, 0.3);
+            --memorial-gray: #2c2c2c;
+            --timeline-glow: rgba(212, 175, 55, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000814 0%, #001d3d 50%, #000814 100%);
+            color: var(--cemetery-mist);
+            font-family: 'Times New Roman', serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Architrave Border System */
+        .architrave-border {
+            border: 8px solid var(--victorian-gold);
+            border-image: repeating-linear-gradient(
+                45deg,
+                var(--victorian-gold) 0px,
+                var(--ethereal-blue) 2px,
+                var(--victorian-gold) 4px,
+                transparent 6px,
+                transparent 8px,
+                var(--victorian-gold) 10px
+            ) 8;
+            position: relative;
+        }
+
+        .architrave-border::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            right: -12px;
+            bottom: -12px;
+            background: repeating-conic-gradient(
+                from 0deg at 50% 50%,
+                var(--architrave-shadow) 0deg,
+                transparent 45deg,
+                var(--architrave-shadow) 90deg,
+                transparent 135deg
+            );
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        /* Egg and Dart Pattern */
+        .egg-dart-pattern {
+            position: relative;
+            padding: 20px;
+            border-top: 4px solid var(--victorian-gold);
+            border-bottom: 4px solid var(--victorian-gold);
+        }
+
+        .egg-dart-pattern::before {
+            content: '◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 12px;
+            color: var(--ethereal-blue);
+            text-shadow: 0 0 8px var(--timeline-glow);
+            letter-spacing: 8px;
+        }
+
+        .egg-dart-pattern::after {
+            content: '◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯ ◆ ◯';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 12px;
+            color: var(--ethereal-blue);
+            text-shadow: 0 0 8px var(--timeline-glow);
+            letter-spacing: 8px;
+        }
+
+        /* Timeline Headers */
+        .temporal-header {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .year-display {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(24px, 8vw, 48px);
+            font-weight: 700;
+            color: var(--victorian-gold);
+            text-shadow: 0 0 20px var(--timeline-glow);
+            display: inline-block;
+            margin: 0 40px;
+            position: relative;
+        }
+
+        .year-separator {
+            font-size: clamp(20px, 6vw, 40px);
+            color: var(--ethereal-blue);
+            text-shadow: 0 0 15px var(--ethereal-blue);
+            animation: ethereal-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes ethereal-pulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        /* 444 Angels Symbolism */
+        .angel-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 18px;
+            color: var(--angel-white);
+            text-shadow: 0 0 10px var(--ethereal-blue);
+            animation: angel-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes angel-glow {
+            0%, 100% { text-shadow: 0 0 10px var(--ethereal-blue); }
+            50% { text-shadow: 0 0 20px var(--ethereal-blue), 0 0 30px var(--cemetery-mist); }
+        }
+
+        /* Game Container */
+        .game-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(44, 44, 44, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .game-title {
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(20px, 5vw, 32px);
+            color: var(--temporal-purple);
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px var(--temporal-purple);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: var(--cemetery-mist);
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        /* Vanity Plate Display */
+        .vanity-plate {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .plate-char {
+            width: 50px;
+            height: 60px;
+            border: 3px solid var(--victorian-gold);
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--angel-white);
+            text-shadow: 0 0 8px var(--ethereal-blue);
+            position: relative;
+            box-shadow: 
+                inset 0 2px 4px rgba(255, 255, 255, 0.1),
+                0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .plate-char.revealed {
+            background: linear-gradient(145deg, var(--ethereal-blue), var(--temporal-purple));
+            animation: reveal-glow 0.5s ease-out;
+        }
+
+        .plate-char.wrong {
+            background: linear-gradient(145deg, #660000, #330000);
+            animation: wrong-shake 0.5s ease-out;
+        }
+
+        @keyframes reveal-glow {
+            0% { transform: scale(1); box-shadow: 0 0 0 rgba(68, 68, 255, 0); }
+            50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(68, 68, 255, 0.8); }
+            100% { transform: scale(1); box-shadow: 0 0 10px rgba(68, 68, 255, 0.4); }
+        }
+
+        @keyframes wrong-shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        /* Input Section */
+        .input-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .letter-input {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--victorian-gold);
+            background: rgba(26, 26, 26, 0.8);
+            color: var(--angel-white);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            text-align: center;
+            margin: 0 10px;
+            text-transform: uppercase;
+        }
+
+        .letter-input:focus {
+            outline: none;
+            border-color: var(--ethereal-blue);
+            box-shadow: 0 0 15px rgba(68, 68, 255, 0.5);
+        }
+
+        .guess-button {
+            background: linear-gradient(145deg, var(--victorian-gold), #b8941f);
+            border: none;
+            color: #000;
+            padding: 12px 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .guess-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Wrong Guesses Display */
+        .wrong-guesses {
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .wrong-letters {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .wrong-letter {
+            padding: 8px 12px;
+            background: rgba(102, 0, 0, 0.3);
+            border: 1px solid #660000;
+            color: #ff6666;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Cemetery Mist Effect */
+        .mist-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(
+                ellipse at 20% 80%,
+                rgba(230, 230, 250, 0.1) 0%,
+                transparent 50%
+            ), radial-gradient(
+                ellipse at 80% 20%,
+                rgba(68, 68, 255, 0.1) 0%,
+                transparent 50%
+            );
+            z-index: -1;
+            animation: mist-drift 20s ease-in-out infinite;
+        }
+
+        @keyframes mist-drift {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(20px) translateY(-10px); }
+            50% { transform: translateX(-10px) translateY(20px); }
+            75% { transform: translateX(-20px) translateY(-5px); }
+        }
+
+        /* Game Status */
+        .game-status {
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 18px;
+        }
+
+        .status-win {
+            color: var(--temporal-purple);
+            text-shadow: 0 0 15px var(--temporal-purple);
+        }
+
+        .status-lose {
+            color: #ff6666;
+            text-shadow: 0 0 15px #ff6666;
+        }
+
+        .new-game-button {
+            background: linear-gradient(145deg, var(--temporal-purple), #9370db);
+            border: none;
+            color: var(--angel-white);
+            padding: 12px 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .new-game-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(189, 147, 249, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .game-container {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            .vanity-plate {
+                gap: 4px;
+            }
+            
+            .plate-char {
+                width: 40px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .letter-input {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mist-overlay"></div>
+    
+    <div class="angel-number">444</div>
+    
+    <div class="temporal-header egg-dart-pattern">
+        <span class="year-display">1875</span>
+        <span class="year-separator">×</span>
+        <span class="year-display">2025</span>
+    </div>
+    
+    <div class="game-container architrave-border">
+        <h1 class="game-title">Victorian Temporal H4ngm4n</h1>
+        <p class="subtitle">~ Springvale Cemetery's Watching Spirits Await Your Vanity Plate ~</p>
+        
+        <div class="vanity-plate" id="vanityPlate">
+            <!-- Generated by JavaScript -->
+        </div>
+        
+        <div class="input-section">
+            <input type="text" class="letter-input" id="letterInput" maxlength="1" placeholder="?">
+            <button class="guess-button" onclick="makeGuess()">GUESS</button>
+        </div>
+        
+        <div class="wrong-guesses">
+            <div>Wrong Guesses: <span id="wrongCount">0</span>/6</div>
+            <div class="wrong-letters" id="wrongLetters"></div>
+        </div>
+        
+        <div class="game-status" id="gameStatus"></div>
+        
+        <button class="new-game-button" onclick="newGame()">New Temporal Portal</button>
+    </div>
+
+    <script>
+        // Victorian Vanity Plate Database (6 characters: A-Z, 1-0)
+        const victorianPlates = [
+            'MARTHA', 'JONAS1', 'WINDEN', 'LOOP33', 'TIME44', 'PORTAL',
+            'ANGEL4', 'SPIRIT', 'MIST77', 'GRAVE1', 'STONE5', 'MEMORY',
+            'GOLD18', 'CROWN7', 'NOBLE6', 'ROYAL9', 'GRAND2', 'MANOR3',
+            'ESTATE', 'VILLA8', 'CASTLE', 'TOWER4', 'BRIDGE', 'GARDEN',
+            'FLOWER', 'ROSE44', 'LILY21', 'IRIS33', 'TULIP7', 'ORCHID',
+            'AURORA', 'CELESTIAL', 'ETHEREAL', 'DIVINE', 'SACRED', 'BLESSED',
+            'AUTUMN', 'WINTER', 'SPRING', 'SUMMER', 'SEASON', 'NATURE',
+            'MUSEUM', 'ARTIST', 'POET17', 'WRITER', 'NOVEL8', 'STORY3',
+            'MUSIC2', 'PIANO5', 'VIOLIN', 'OPERA6', 'WALTZ9', 'DANCE4'
+        ];
+
+        let currentPlate = '';
+        let guessedLetters = [];
+        let wrongGuesses = [];
+        let gameWon = false;
+        let gameLost = false;
+        
+        const maxWrongGuesses = 6;
+
+        function getRandomPlate() {
+            return victorianPlates[Math.floor(Math.random() * victorianPlates.length)];
+        }
+
+        function createPlateDisplay(plate) {
+            const plateContainer = document.getElementById('vanityPlate');
+            plateContainer.innerHTML = '';
+            
+            for (let i = 0; i < plate.length; i++) {
+                const charDiv = document.createElement('div');
+                charDiv.className = 'plate-char';
+                charDiv.setAttribute('data-index', i);
+                charDiv.textContent = guessedLetters.includes(plate[i]) ? plate[i] : '?';
+                plateContainer.appendChild(charDiv);
+            }
+        }
+
+        function updateWrongGuesses() {
+            document.getElementById('wrongCount').textContent = wrongGuesses.length;
+            
+            const wrongContainer = document.getElementById('wrongLetters');
+            wrongContainer.innerHTML = '';
+            
+            wrongGuesses.forEach(letter => {
+                const letterDiv = document.createElement('div');
+                letterDiv.className = 'wrong-letter';
+                letterDiv.textContent = letter;
+                wrongContainer.appendChild(letterDiv);
+            });
+        }
+
+        function checkGameStatus() {
+            // Check if won
+            if (currentPlate.split('').every(char => guessedLetters.includes(char))) {
+                gameWon = true;
+                document.getElementById('gameStatus').innerHTML = 
+                    '<div class="status-win">🕊️ The Spirits Approve! Portal Opened! 🕊️</div>';
+                return;
+            }
+            
+            // Check if lost
+            if (wrongGuesses.length >= maxWrongGuesses) {
+                gameLost = true;
+                document.getElementById('gameStatus').innerHTML = 
+                    '<div class="status-lose">💀 The Cemetery Gates Remain Sealed 💀<br>The plate was: ' + currentPlate + '</div>';
+                return;
+            }
+            
+            document.getElementById('gameStatus').innerHTML = '';
+        }
+
+        function makeGuess() {
+            if (gameWon || gameLost) return;
+            
+            const input = document.getElementById('letterInput');
+            const letter = input.value.toUpperCase();
+            
+            if (!letter || letter.length !== 1) {
+                alert('Please enter a single letter or number (A-Z, 1-0)');
+                return;
+            }
+            
+            // Validate character (A-Z, 1-0)
+            if (!/^[A-Z1-0]$/.test(letter)) {
+                alert('Only Victorian characters allowed: A-Z and 1-0');
+                return;
+            }
+            
+            if (guessedLetters.includes(letter) || wrongGuesses.includes(letter)) {
+                alert('You already guessed that character!');
+                return;
+            }
+            
+            input.value = '';
+            
+            if (currentPlate.includes(letter)) {
+                guessedLetters.push(letter);
+                
+                // Animate revealed characters
+                const plateChars = document.querySelectorAll('.plate-char');
+                currentPlate.split('').forEach((char, index) => {
+                    if (char === letter) {
+                        plateChars[index].classList.add('revealed');
+                        plateChars[index].textContent = char;
+                    }
+                });
+            } else {
+                wrongGuesses.push(letter);
+                
+                // Animate wrong guess
+                const plateChars = document.querySelectorAll('.plate-char');
+                plateChars.forEach(char => {
+                    char.classList.add('wrong');
+                    setTimeout(() => char.classList.remove('wrong'), 500);
+                });
+            }
+            
+            updateWrongGuesses();
+            checkGameStatus();
+        }
+
+        function newGame() {
+            currentPlate = getRandomPlate();
+            guessedLetters = [];
+            wrongGuesses = [];
+            gameWon = false;
+            gameLost = false;
+            
+            createPlateDisplay(currentPlate);
+            updateWrongGuesses();
+            document.getElementById('gameStatus').innerHTML = '';
+            document.getElementById('letterInput').focus();
+        }
+
+        // Event listeners
+        document.getElementById('letterInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                makeGuess();
+            }
+        });
+
+        document.getElementById('letterInput').addEventListener('input', function(e) {
+            // Auto-uppercase and validate input
+            let value = e.target.value.toUpperCase();
+            if (!/^[A-Z1-0]*$/.test(value)) {
+                value = value.replace(/[^A-Z1-0]/g, '');
+            }
+            e.target.value = value;
+        });
+
+        // Initialize game
+        newGame();
+        
+        // Add some atmospheric effects
+        setInterval(() => {
+            const angelNumber = document.querySelector('.angel-number');
+            angelNumber.style.transform = `rotate(${Math.sin(Date.now() / 1000) * 2}deg)`;
+        }, 100);
+    </script>
+</body>
+</html>
