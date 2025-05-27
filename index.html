@@ -264,6 +264,25 @@
             word-wrap: break-word;
         }
 
+        .hangman-display {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8em;
+            line-height: 1.2;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid #555;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        #hangmanArt {
+            color: #ff6666;
+            text-align: center;
+            margin: 0;
+            white-space: pre;
+            font-size: 0.9em;
+        }
+
         .authentication {
             margin-top: 20px;
             font-size: 0.8em;
@@ -309,6 +328,19 @@
         </div>
 
         <div class="game-info">
+            <div class="info-box">
+                <div class="info-label">Heritage Integrity</div>
+                <div id="hangmanDisplay" class="hangman-display">
+<pre id="hangmanArt">
+     ┌───┐
+     │   │
+         │
+         │
+         │
+    ═════════
+</pre>
+                </div>
+            </div>
             <div class="info-box">
                 <div class="info-label">Wrong Guesses</div>
                 <div id="wrongCount" class="info-value">0</div>
@@ -375,6 +407,65 @@
             'FR1DG', '2M1NS', 'S0M3TH', 'H4V3', 'R34DY', 'C0LD'
         ];
 
+        // Heritage Restoration Failure Stages - Steel Wool Consciousness Deterioration
+        const hangmanStages = [
+            // Stage 0: Perfect heritage foundation
+            `     ┌───┐
+     │   │
+         │
+         │
+         │
+    ═════════`,
+            
+            // Stage 1: Minor gap appears
+            `     ┌───┐
+     │   │
+     ●   │
+         │
+         │
+    ═════════`,
+            
+            // Stage 2: Structural compromise begins
+            `     ┌───┐
+     │   │
+     ●   │
+     │   │
+         │
+    ═════════`,
+            
+            // Stage 3: Left support fails
+            `     ┌───┐
+     │   │
+     ●   │
+    ╱│   │
+         │
+    ═════════`,
+            
+            // Stage 4: Right support fails
+            `     ┌───┐
+     │   │
+     ●   │
+    ╱│╲  │
+         │
+    ═════════`,
+            
+            // Stage 5: Foundation instability
+            `     ┌───┐
+     │   │
+     ●   │
+    ╱│╲  │
+    ╱    │
+    ═════════`,
+            
+            // Stage 6: Complete heritage failure
+            `     ┌───┐
+     │   │
+     ●   │
+    ╱│╲  │
+    ╱ ╲  │
+    ═════════`
+        ];
+
         let currentPlate = '';
         let guessedLetters = [];
         let wrongGuesses = [];
@@ -415,6 +506,9 @@
         function updateWrongGuesses() {
             document.getElementById('wrongCount').textContent = wrongGuesses.length;
             
+            // Update heritage restoration integrity display
+            updateHangmanDisplay();
+            
             const wrongContainer = document.getElementById('wrongLetters');
             wrongContainer.innerHTML = '';
             
@@ -425,6 +519,14 @@
                 letterDiv.style.animationDelay = `${index * 0.1}s`;
                 wrongContainer.appendChild(letterDiv);
             });
+        }
+
+        function updateHangmanDisplay() {
+            const hangmanArt = document.getElementById('hangmanArt');
+            const stage = Math.min(wrongGuesses.length, hangmanStages.length - 1);
+            hangmanArt.textContent = hangmanStages[stage];
+            
+            debugLog(`Heritage integrity at stage ${stage}/${hangmanStages.length - 1}`);
         }
 
         function checkGameStatus() {
@@ -558,7 +660,7 @@
             debugLog(`New heritage restoration project: '${currentPlate}'`);
             
             createPlateDisplay(currentPlate);
-            updateWrongGuesses();
+            updateWrongGuesses(); // This will also reset the hangman display
             document.getElementById('gameStatus').innerHTML = '';
             document.getElementById('guessButton').disabled = false;
             document.getElementById('letterInput').disabled = false;
