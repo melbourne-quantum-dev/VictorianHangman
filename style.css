@@ -229,6 +229,103 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Ghost Chinese Character - 鬼架构 (Ghost Architecture) */
+.ghost-architecture {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.08);
+    font-family: 'SimSun', 'Microsoft YaHei', serif;
+    pointer-events: none;
+    z-index: -1;
+    user-select: none;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    animation: ghostFloat 6s ease-in-out infinite;
+}
+
+/* Alternative: Smaller, more subtle version */
+.ghost-architecture.subtle {
+    font-size: 2.5em;
+    color: rgba(255, 255, 255, 0.05);
+    top: 75%;
+    animation: none;
+}
+
+/* Alternative: Multiple ghost characters scattered */
+.ghost-architecture.scattered {
+    font-size: 1.8em;
+    color: rgba(255, 255, 255, 0.06);
+}
+
+.ghost-architecture.scattered::before {
+    content: '鬼';
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    opacity: 0.4;
+    font-size: 0.8em;
+}
+
+.ghost-architecture.scattered::after {
+    content: '构';
+    position: absolute;
+    top: 20px;
+    right: -25px;
+    opacity: 0.6;
+    font-size: 0.9em;
+}
+
+/* Ghost floating animation */
+@keyframes ghostFloat {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0px);
+        opacity: 0.08;
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-5px);
+        opacity: 0.12;
+    }
+}
+
+/* Alternative: Glitch ghost effect */
+.ghost-architecture.glitch {
+    animation: ghostGlitch 8s ease-in-out infinite;
+}
+
+@keyframes ghostGlitch {
+    0%, 90%, 100% {
+        transform: translate(-50%, -50%);
+        opacity: 0.08;
+    }
+    92% {
+        transform: translate(-50%, -50%) translate(2px, 0);
+        opacity: 0.15;
+    }
+    94% {
+        transform: translate(-50%, -50%) translate(-2px, 0);
+        opacity: 0.05;
+    }
+}
+
+/* Container positioning - add this to your game-container */
+.game-container {
+    position: relative; /* Make sure this is set for absolute positioning to work */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+    .ghost-architecture {
+        font-size: 2.5em;
+        top: 72%;
+    }
+    
+    .ghost-architecture.scattered {
+        font-size: 1.5em;
+    }
+}
+
 /* Header Section */
 .header {
     margin-bottom: 30px;
