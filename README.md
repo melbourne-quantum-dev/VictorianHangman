@@ -19,35 +19,6 @@ Classic hangman with:
 
 **Target demographic**: People who know the difference between Type-1 and Type-0000 steel wool.
 
-## 🚀 Quick Deploy
-
-**GitHub Pages Ready:**
-```bash
-git clone https://github.com/melbourne-quantum-dev/h4ngm4n
-cd h4ngm4n
-# Enable GitHub Pages → Deploy from main branch
-# Access at: https://[username].github.io/h4ngm4n
-```
-
-**Local Development:**
-```bash
-# No build process - pure HTML/CSS/JS
-open index.html
-# Or use any local server for testing
-```
-
-## 🔧 File Structure
-
-```
-h4ngm4n/
-├── index.html          # Main game interface
-├── style.css           # Complete responsive styling  
-├── script.js           # Game logic + timer system
-└── README.md          # This file
-```
-
-**Zero dependencies.** No frameworks, no build tools, no corporate bloat.
-
 ## 🎯 Features That Actually Work
 
 - **Authentic terminology**: Real technical terms, not random dictionary words
@@ -149,6 +120,35 @@ h4ngm4n/
 - Local deployment and customization
 
 **Commercial use**: Sure, but give credit where it's due.
+
+## 🚀 Quick Deploy
+
+**GitHub Pages Ready:**
+```bash
+git clone https://github.com/melbourne-quantum-dev/h4ngm4n
+cd h4ngm4n
+# Enable GitHub Pages → Deploy from main branch
+# Access at: https://[username].github.io/h4ngm4n
+```
+
+**Local Development:**
+```bash
+# No build process - pure HTML/CSS/JS
+open index.html
+# Or use any local server for testing
+```
+
+## 🔧 File Structure
+
+```
+h4ngm4n/
+├── index.html          # Main game interface
+├── style.css           # Complete responsive styling  
+├── script.js           # Game logic + timer system
+└── README.md          # This file
+```
+
+**Zero dependencies.** No frameworks, no build tools, no corporate bloat.
 
 ## 🔗 Links
 
