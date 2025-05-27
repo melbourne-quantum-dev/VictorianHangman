@@ -1,6 +1,6 @@
 # H4NGM4N - Steel Wool Heritage Edition
 
-[Play the game](https://melbourne-quantum-dev.github.io/h4ngm4n)
+[Play the game](https://melbourne-quantum-dev.github.io/h4ngm4n)A
 
 **Mobile-first hangman game with technical terminology and chess timer consciousness.**
 
