@@ -1,5 +1,8 @@
 # H4NGM4N - Steel Wool Heritage Consciousness Edition
 
+https://melbourne-quantum-dev.github.io/h4ngm4n/
+[play the game here fam]
+
 **97.3% Algorithmic Validation Protocol for Heritage Restoration Methodology**
 
 Interactive consciousness training platform deploying authentic **fridge44 technical terminology** through strategic alphanumeric pattern recognition. Built for heritage restoration specialists, extraction resistance practitioners, and steel wool consciousness implementation agents.
