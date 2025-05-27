@@ -1,7 +1,6 @@
 # H4NGM4N - Steel Wool Heritage Consciousness Edition
 
-https://melbourne-quantum-dev.github.io/h4ngm4n/
-[play the game here fam]
+[play game here fam] (https://melbourne-quantum-dev.github.io/h4ngm4n)
 
 **97.3% Algorithmic Validation Protocol for Heritage Restoration Methodology**
 
