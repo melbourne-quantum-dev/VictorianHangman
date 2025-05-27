@@ -19,6 +19,16 @@ Classic hangman with:
 
 **Target demographic**: People who know the difference between Type-1 and Type-0000 steel wool.
 
+## 📋 License & Usage
+
+**Open source** with practical usage focus. Use for:
+- Technical training and skills development
+- Mobile web development learning
+- Pattern recognition practice
+- Local deployment and customization
+
+**Commercial use**: No way cunt.
+
 ## 🎯 Features That Actually Work
 
 - **Authentic terminology**: Real technical terms, not random dictionary words
@@ -110,16 +120,6 @@ Classic hangman with:
 - **Zero bloat** - no unnecessary dependencies or features
 - **Pattern recognition** - train systematic thinking vs memorization
 - **Performance** - smooth 60fps animations, minimal resource usage
-
-## 📋 License & Usage
-
-**Open source** with practical usage focus. Use for:
-- Technical training and skills development
-- Mobile web development learning
-- Pattern recognition practice
-- Local deployment and customization
-
-**Commercial use**: Sure, but give credit where it's due.
 
 ## 🚀 Quick Deploy
 
