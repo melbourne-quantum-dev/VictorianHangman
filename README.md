@@ -23,7 +23,7 @@ Classic hangman with:
 
 **GitHub Pages Ready:**
 ```bash
-git clone https://github.com/[your-username]/h4ngm4n
+git clone https://github.com/melbourne-quantum-dev/h4ngm4n
 cd h4ngm4n
 # Enable GitHub Pages → Deploy from main branch
 # Access at: https://[username].github.io/h4ngm4n
@@ -90,6 +90,7 @@ h4ngm4n/
 - Backend integration or user accounts
 - Monetization features or tracking
 - Academic algorithmic optimizations
+- Lagging dogs
 
 ## 🎮 Game Modes
 
