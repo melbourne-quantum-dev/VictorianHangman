@@ -181,7 +181,7 @@ const authenticPlates = [
     'S4UN4',   // Heating system
     'W1MH0F',  // Master teacher
     'DUR14N',  // DurianRider early adopter
-    'VSCTMY'    // Victorian Supreme Court neutering
+    'VSCTMY',    // Victorian Supreme Court neutering
     'TH3R4P',  // Therapeutic breakthrough (6-char limit)
     'H1LUX',   // Toyota Wars
     'R4PT0R', // Too cold at tax time
