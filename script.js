@@ -169,7 +169,7 @@ const authenticPlates = [
     'M4SS4G', // 6 char limit
     'RUB', // Double entendre sanding protocol
     'C4SH', // Parmigianno economy
-    'W4LL3T' // Storage protocol
+    'W4LL3T', // Storage protocol
     
     // === CONSCIOUSNESS EVOLUTION ===
     'GR0W',    // Development process
