@@ -336,14 +336,20 @@ body {
 
 /* ==================== GAME STATUS ==================== */
 .game-status {
-    margin: 25px 0; /* Increased from 20px */
-    min-height: 70px; /* Increased from 60px */
+    margin: 5px 0 !important; /* Drastically reduced from 25px */
+    min-height: 0 !important; /* Remove fixed height when empty */
     display: flex;
     align-items: center;
     justify-content: center;
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-family: 'JetBrains Mono', monospace;
+}
+
+/* Only add height when there's actual content */
+.game-status:not(:empty) {
+    min-height: 50px;
+    margin: 15px 0;
 }
 
 .status-win {
