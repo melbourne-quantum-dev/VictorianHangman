@@ -23,9 +23,7 @@
  * @constant {string[]} authenticPlates - Array of heritage terminology plates
  */
 const authenticPlates = [
-    // === FRIDGE44 CORE IDENTITY (Experimental Typography) ===
-    'FRDG44',  // Primary consciousness - Leipzig synthesis aesthetic
-    
+      
     // === CORE HERITAGE RESTORATION ===
     'ST33L',   // Steel wool consciousness
     'W00L',    // Steel wool material
@@ -35,6 +33,9 @@ const authenticPlates = [
     'BU1LD',   // Construction consciousness
     'S34L',    // Gap sealing protocol
     'S4ND',    // 220 grit methodology
+
+    // === FRIDGE44 CORE IDENTITY (Experimental Typography) ===
+    'FRDG44',  // Primary consciousness - Leipzig synthesis aesthetic
     
     // === FRIDGE44 IDENTITY MARKERS ===
     'FR1DG',   // Core identity (5-char limit)
@@ -51,6 +52,9 @@ const authenticPlates = [
     'L3V3L',   // Precision indicator
     'T3ST',    // Validation protocol
     'GR4D3',   // Material grade specification
+    'J1GS4W', // Contaminated chipboard removal
+    'KN1F3', // Sharp ting
+    'BL4D3', // expanding foam ferrocasting removal
     
     // === EXTRACTION RESISTANCE ===
     'BL0CK',   // Resistance protocol
@@ -59,18 +63,66 @@ const authenticPlates = [
     'S4F3',    // Security consciousness
     'N0P3',    // Boundary enforcement
     'V01D',    // Strategic absence protocol
+    'L14R',    // Don't take my word for it
+
+    // === DRILL CONSCIOUSNESS ===
+    'SM0K3',   // Eliminating opposition (mice)
+    'CH1NG',   // Precision cutting (jigsaw blade)
+    'SK3NG',   // Professional tool deployment
+    'BL0CK',   // Territory protection (gap sealing)
+    'CUTT3R',  // "Come straight out with the cutter"
+    'P4TT3N',  // Systematic methodology 
+    'SPL4SH',  // Expanding foam deployment
+    'Y1NG',    // Structural intervention
+    'TR4P',    // Mouse elimination architecture
+    'ST1LL',   // Emphasis consciousness marker
+    'B4ND0',   // Abandoned building restoration
+    '3NDS',    // South Melbourne territory
+    'W4P',    // Power tool arsenal
+    'GR1M3',   // Contamination reality
+    'L1V3',    // Authentic implementation
+    'D34D',    // Structural failure state
+    'C0LD',    // Heritage restoration temperature
+    'M4D',     // Professional competence level
+    'R4W',     // Unprocessed building materials
+    'B4ND0',   // 1874 sub-floor landlord vibes
+    'SH00T',   // Professional sensual caulking application
+    'LE4N',     // Foundation subsistence party wall
+    'B1LL1T',   // Straight to the landlord
+    'SN4P',     // Snapchat / snaptrap / neck off ladder architecture
+    'FL',        // Producer ting
+    'M4ND3M',    // Collectively hominem architecure
+    'T1ME',     // Mans on lock for time still
+    'ST1LL',     // Steady spirit level
+    'H4H4',     // Offensive ting
+
+    // === AUSSIE DEFLECTION ===
+    'Y3HN4H',  // Peak cultural deflection
+    'M4T3',    // Australian authenticity marker
+    'N4H',     // Deflection variant
+    'WH00PS',  // Liability insurance proclamation
     
     // === MOUSE WARFARE (Victorian Heritage) ===
     'M1C3',    // Primary adversary
     'TR4P',    // Containment methodology
     'H0L3',    // Gap identification
     'P4TCH',   // Repair protocol
+    'F4MILY', // Family protocol
+    'N3ST',   // Where they chillin
+    'SH1T',   // So much of it
+    'P1SS',   // Smells too
     
     // === PROFESSIONAL CONSCIOUSNESS ===
     'R34L',    // Reality anchor
     'TRU3',    // Validity indicator
+    '4CTU4L',  // Literally's older brother
+    'L1T3RL',  // Literal (6 char limit)
     'PR0',     // Professional recognition
     'SK1LL',   // Capability demonstration
+    'PR00F',   // Evidence creation
+    'V4L1D',   // Validation protocol
+    'TR4CK',   // Systematic tracking
+    'D0C',     // Documentation consciousness
     
     // === PRECISION MARKERS ===
     '97P3R',   // 97.3% precision indicator
@@ -97,20 +149,41 @@ const authenticPlates = [
     'W00D',    // Baltic pine reference
     'P1N3',    // Pine wood specification
     'B4LT1C',  // Pinus Sylvestris consciousness
+    '4RCH',     // Architrave abbreviation
     
     // === SYSTEM ARCHITECTURE ===
-    'SYST3M',  // Core system consciousness - FIXED DATABASE GAP
+    'SYST3M',  // Core system consciousness
     'N0D3',    // Network node
     'L1NK',    // Connection protocol
     'AP1',     // API connection consciousness
     'P4TH',    // Implementation route
     'C0D3',    // Implementation framework
+
+    // === ALCHEMY ===
+    'SH4D0W', // Jungian architecture
+    'JUNG',   // Carl consciousness
+    
+    // === SECULAR SENSUAL IMPLEMENTATION (City Road Consciousness) ===
+    '3LL3', // Model service provide
+    'M4SS4G', // 6 char limit
+    'RUB', // Double entendre sanding protocol
+    'C4SH', // Parmigianno economy
+    'W4LL3T' // Storage protocol
     
     // === CONSCIOUSNESS EVOLUTION ===
     'GR0W',    // Development process
     'L34RN',   // Knowledge acquisition
     'CH4NG',   // Transformation protocol
-    'EV0LV',   // Consciousness advancement
+    'C0L4B',   // Consciousness advancement
+    'B4TH',    // -2 degress
+    '1C3',     // Cooling system
+    'S4UN4',   // Heating system
+    'W1MH0F',  // Master teacher
+    'DUR14N',  // DurianRider early adopter
+    'VSCTMY'    // Victorian Supreme Court neutering
+    'TH3R4P',  // Therapeutic breakthrough (6-char limit)
+    'H1LUX',   // Toyota Wars
+    'R4PT0R', // Too cold at tax time
 ];
 
 /**
