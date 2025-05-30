@@ -185,7 +185,10 @@ const authenticPlates = [
     'TH3R4P',  // Therapeutic breakthrough (6-char limit)
     'H1LUX',   // Toyota Wars
     'R4PT0R', // Too cold at tax time
-];
+    'VSCTMY', // Dr Snip
+    'D3F3R', // Deferall consciousness
+    'R3F3R', // Turn and move
+]; 
 
 /**
  * Heritage Restoration Failure Stages - ASCII Art Progression
